@@ -113,7 +113,6 @@ public class OrderController {
 			cart = user.getCart();
 			product = null;
 
-			cartitemsList = cartItemsDao.getCartItembyCartId(cart.getCart_id());
 
 			cartitemsList = cartItemsDao.getCartItembyCartId(cart.getCart_id());
 			if (cartitemsList == null || cartitemsList.isEmpty()) {
@@ -257,14 +256,67 @@ public class OrderController {
 		return "PaymentMode";
 	}
 
+	
 	@RequestMapping("/payment")
-	public String payment(@ModelAttribute("otp") String c, Model model) {
+	public String payment(@ModelAttribute("card")Card c, @RequestParam("otp")String otp,  Model model) {
+ 		System.out.println(1324);
+		int a;
+		if(otp==null)
+		{
+			
+			System.out.println("Move to 2nd condition");
+			a=2;
+		}
+		else
+			a=1;
+//		System.out.println(str);
+				
+//		if (str.equalsIgnoreCase("Start Subscription")) {
+//			a = 2;
+//		} else {
+//			a = Integer.parseInt(str);
+//		}
+		System.out.println(a);
+		
+		switch (a) {
+		case 1:
+				if(otp.equals(o))
+				{
+					pay.setPay_method("COD");
+					pay.setPay_status("no");
+				}
+				else
+				{
+					return "redirect:/pay";
+				}
+			 
+			break;
+		case 2:
+			if(a==2)
+			{
+			pay.setPay_method("card");
+			pay.setPay_status("yes");
+			payDao.saveupdate(pay);
+			cardDao.saveupdate(c);
+			}
+			else
+			{
+				return "Thanks";
+			}
 
-        if(c.equals(o))
-		return "redirect:/ThankYou";
-        else
-        	return "redirect:/pay";	
+			break;
+		}
+		return "redirect:/Thankyou";
 	}
+
+//	@RequestMapping("/payment")
+//	public String payment(@ModelAttribute("card")Card c,@RequestParam("otp")String otp ,Model model) {
+//
+//        if(c.equals(o))
+//		return "redirect:/ThankYou";
+//        else
+//        	return "redirect:/pay";	
+//	}
 
 	@RequestMapping("/ThankYou")
 	public String orderconformation(HttpSession session) {
@@ -347,8 +399,9 @@ public class OrderController {
 	
 	
 	@RequestMapping(value = "/ConfirmationMail")
-	public void SendMsg() {
+	public String SendMsg(Model model, @ModelAttribute("card")Card c) {
 		System.out.println(21312);
+		cardDao.saveupdate(c);
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		if (!(authentication instanceof AnonymousAuthenticationToken)) 
 		{
@@ -376,6 +429,7 @@ public class OrderController {
 
 		
 		}
+		return "process";
 	}
 
 

@@ -9,12 +9,12 @@
 				<form:form action="${add}" method="post" >
 					<div class="form-group">
 						<label for="email">Email address:</label> 
-						<input type="email" class="form-control" placeholder="xyz@gmail.com" name="j_username" />
+						<input type="email" class="form-control" placeholder="xyz@gmail.com" name="j_username" required="required"/>
 					</div>
 					<div class="form-group">
 						<label for="pwd">Password:</label> 
 						<input type="password"
-							class="form-control" placeholder="**********" name="j_password"/>
+							class="form-control" placeholder="**********" name="j_password" required="required"/>
 					</div>
 					<div class="checkbox">
 						<label><input type="checkbox"> Remember me</label>

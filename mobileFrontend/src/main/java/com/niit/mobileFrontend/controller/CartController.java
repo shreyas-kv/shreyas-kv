@@ -181,6 +181,7 @@ class CartController {
 					c1.setTot_items(0);
 					c1.setTotal(0.0);
 					cartDao.saveupdate(c1);
+					session.setAttribute("items", c1.getTot_items());
 				}
 				
 			}

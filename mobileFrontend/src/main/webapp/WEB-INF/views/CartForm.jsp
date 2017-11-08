@@ -14,7 +14,7 @@
       <tr>
         
         <th>Product Name</th>
-        <th>Product Quantity</th>
+<!--         <th>Product Quantity</th> -->
         <th>Product Price</th>
         <th>Product Description</th>
         <th>Product Image</th>
@@ -25,7 +25,7 @@
     	<c:forEach items="${cartItems}" var="q" >  
       <tr>
         <td>${q.getProduct().getProd_name()}</td>
-        <td>${q.getProduct().getProd_qty()}</td>
+<%--         <td>${q.getProduct().getProd_qty()}</td> --%>
         <td>${q.getProduct().getProd_price()}</td>
         <td>${q.getProduct().getProd_desc()}</td>
         <td><img src="<c:url value="resources/PImages/${q.getProduct().getProd_id()}.jpg"/>", width=75px, height=50px ></td>

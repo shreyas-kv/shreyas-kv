@@ -21,7 +21,6 @@ public class User {
 	private String user_name;
 	private String user_emailid;
 	private String user_password;
-	private String user_address;
 	//private String user_enable;
 	private String user_role="ROLE_USER";
 	private String user_phno;
@@ -88,12 +87,7 @@ public class User {
 	public void setUser_password(String user_password) {
 		this.user_password = user_password;
 	}
-	public String getUser_address() {
-		return user_address;
-	}
-	public void setUser_address(String user_address) {
-		this.user_address = user_address;
-	}
+	
 //	
 //	public String getUser_enable() {
 //		return user_enable;

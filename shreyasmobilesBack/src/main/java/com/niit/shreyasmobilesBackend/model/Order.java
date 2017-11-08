@@ -30,7 +30,7 @@ public class Order {
 	@Id
 	private String order_Id;
 	
-	@OneToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	@OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	@JoinColumn(name = "b_id")
 	BillingAddress billing;
 	

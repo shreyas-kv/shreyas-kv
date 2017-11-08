@@ -28,7 +28,7 @@ public class LoginController {
 		if (error != null)
 			obj.addObject("msg1", "invalid username or password");
 		else
-			obj.addObject("msg2", "login success");
+			obj.addObject("msg2", "logout success");
 		
 		return obj;
 		

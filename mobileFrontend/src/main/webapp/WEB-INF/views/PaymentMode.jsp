@@ -47,7 +47,10 @@
 						
 						
 						<div id="collapseTwo" aria-expanded="false" class="collapse">
-							  <%@include file="CardPay.jsp"%>							
+							  <%@include file="CardPay.jsp"%>
+
+							  
+							  							
 						</div>
 
 						</div>
@@ -61,9 +64,11 @@
 						
 						</div> 
 						<div class="footerNavWrap clearfix">
-							<div class="btn btn-success pull-left btn-fyi"><span class="glyphicon glyphicon-chevron-left"></span> CONTINUE SHOPPING</div>
+							<a href="<c:url value="/HomePage"/>"
+				class="btn btn-success pull-left btn-fyi" role="button">CONTINUE
+				SHOPPING</a>
 									
-							<a href="<c:url value="/payment"/>" class="btn btn-success pull-right btn-fyi"  role="button" >CHECKOUT</a>			
+							<a href="<c:url value="/Thanku"/>" class="btn btn-success pull-right btn-fyi"  role="button" >CHECKOUT</a>			
 						
 						</div>
 					</div>

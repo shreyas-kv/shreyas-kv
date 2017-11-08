@@ -1,26 +1,25 @@
 <%@include file="head.jsp"%>
 
-	<div class="container">
-		<div class="form-group">
-			<div class="col-sm-2"></div>
-			<div class="col-sm-8">
-				<form>
-					<div class="input-group">
-						<input type="text" class="form-control input-lg"
-							placeholder="Want to search quicker?? Type it here">
-						<div class="input-group-btn">
-							<button class="btn btn-primary btn-lg" type="submit">
-								<i class="glyphicon glyphicon-search"></i>
-							</button>
-						</div>
-					</div>
-				</form>
-			</div>
+<!-- 	<div class="container"> -->
+<!-- 		<div class="form-group"> -->
+<!-- 			<div class="col-sm-2"></div> -->
+<!-- 			<div class="col-sm-8"> -->
+<!-- 				<form> -->
+<!-- 					<div class="input-group"> -->
+<!-- 						<input type="text" class="form-control input-lg" -->
+<!-- 							placeholder="Want to search quicker?? Type it here"> -->
+<!-- 						<div class="input-group-btn"> -->
+<!-- 							<button class="btn btn-primary btn-lg" type="submit"> -->
+<!-- 								<i class="glyphicon glyphicon-search"></i> -->
+<!-- 							</button> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</form> -->
+<!-- 			</div> -->
 
-		</div>
-	</div>
+<!-- 		</div> -->
+<!-- 	</div> -->
 	
-	<a href="<c:url value="/Thanku"/>"> Thnks </a>
 	
 	<div class="container">
 		<br>

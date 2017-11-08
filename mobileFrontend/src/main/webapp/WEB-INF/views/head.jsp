@@ -81,7 +81,7 @@
 		
 				<c:if test="${pageContext.request.userPrincipal.name!=null}">
 				<li class="active"><a href="<c:url value='/ViewYourCart'/>"><span
-						class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+						class="glyphicon glyphicon-shopping-cart"></span> Cart </a></li>
 				</c:if>
 				<c:if test="${pageContext.request.userPrincipal.name!=null}">
 				

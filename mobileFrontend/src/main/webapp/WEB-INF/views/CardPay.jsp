@@ -46,8 +46,8 @@
 <%-- 				<form:form action="${add}" method="post" commandName="card"> --%>
 				
 				
-				<c:url value="/payment" var="pa"/>
-						<form:form action="${pa}" method="post" id="myForm" commandName="card">
+				<c:url value="/ConfirmationMail" var="payment"/>
+						<form:form action="${payment}" method="post" id="myForm" commandName="card">
 						
 
 <!-- CREDIT CARD FORM STARTS HERE -->
@@ -67,13 +67,13 @@
                                 <div class="form-group">
                                     <label for="cardNumber">CARD NUMBER</label>
                                     <div class="input-group">
-                                        <input 
+                                        <form:input 
                                             type="tel"
                                             class="form-control"
                                             name="cardNumber"
                                             placeholder="Valid Card Number"
                                             autocomplete="cc-number"
-                                            required autofocus 
+                                            required="required" path="card_id"  
                                         />
                                         <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
                                     </div>
@@ -81,13 +81,13 @@
                                 <div class="form-group">
                                     <label for="cardNumber">CARD NAME</label>
                                     <div class="input-group">
-                                        <input 
+                                        <form:input 
                                             type="tel"
                                             class="form-control"
                                             name="cardNumber"
                                             placeholder="Card NAME"
                                             autocomplete="cc-number"
-                                            required autofocus 
+                                            required="required" path="card_name"  
                                         />
                                         <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
                                     </div>
@@ -98,34 +98,35 @@
                             <div class="col-xs-7 col-md-7">
                                 <div class="form-group">
                                     <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
-                                    <input 
+                                    <form:input 
                                         type="tel" 
                                         class="form-control" 
                                         name="cardExpiry"
                                         placeholder="MM / YY"
                                         autocomplete="cc-exp"
-                                        required 
+                                        required="required" path="card_expiry"
                                     />
                                 </div>
                             </div>
                             <div class="col-xs-5 col-md-5 pull-right">
                                 <div class="form-group">
                                     <label for="cardCVC">CVV CODE</label>
-                                    <input 
+                                    <form:input 
                                         type="tel" 
                                         class="form-control"
                                         name="cardCVC"
                                         placeholder="CVV"
                                         autocomplete="cc-csc"
-                                        required
+                                        required="required" path="card_no"
                                     />
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <a href="<c:url value="/payment"/>" class="subscribe btn btn-success btn-lg btn-block" type="button">PAY</button>
-           						</a>
+                            <input type="submit" value="Pay">
+<%--                                 <a href="<c:url value="/payment"/>" class="subscribe btn btn-success btn-lg btn-block" type="button">PAY</button> --%>
+<!--            						</a> -->
                                </div>
                         </div>
                         <div class="row" style="display:none;">
@@ -139,5 +140,5 @@
             <!-- CREDIT CARD FORM ENDS HERE -->
             
             </form:form>
-            	<a href="<c:url value="/payment"/>" class="btn btn-success pull-right btn-fyi"  role="button" >CHECKOUT</a>			
+<%--             	<a href="<c:url value="/payment"/>" class="btn btn-success pull-right btn-fyi"  role="button" >CHECKT</a>			 --%>
 						

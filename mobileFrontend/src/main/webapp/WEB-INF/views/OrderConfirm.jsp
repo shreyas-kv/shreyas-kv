@@ -55,9 +55,9 @@
       <tr>
         <th>Product Image</th>
         <th>Product Name</th>
-        <th>Product Quantity</th>
+<!--         <th>Product Quantity</th> -->
         <th>Product Price</th>
-        <th>Product Total</th>
+<!--         <th>Product Total</th> -->
         
               
       </tr>
@@ -69,9 +69,9 @@
       <tr>
       	<td><img src="<c:url value="resources/PImages/${q.getProduct().getProd_id()}.jpg"/>", width=125px, height=75px ></td>
         <td>${q.getProduct().getProd_name()}</td>
-        <td>${q.getProduct().getProd_qty()}</td>
+<%--         <td>${q.getProduct().getProd_qty()}</td> --%>
         <td>${q.getProduct().getProd_price()}</td>
-        <td>${q.getProduct().getProd_price() * q.getProduct().getProd_qty()}</td>
+<%--         <td>${q.getProduct().getProd_price() * q.getProduct().getProd_qty()}</td> --%>
         
       </tr>
      
@@ -90,7 +90,7 @@
         <td>${product.getProd_name()}</td>
         <td>${product.getProd_qty()}</td>
         <td>${product.getProd_price()}</td>
-        <td>${product.getProd_price() * product.getProd_qty()}</td>
+<%--         <td>${product.getProd_price() * product.getProd_qty()}</td> --%>
         
       </tr>
 						<td>

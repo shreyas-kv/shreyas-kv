@@ -30,7 +30,7 @@ public class UserTest {
 		
 		//user.setUser_id("45");
 		user.setUser_name("shreyas");
-		user.setUser_address("bangalore");
+//		user.setUser_address("bangalore");
 		user.setUser_emailid("ss@s.com");
 //		user.setUser_enable("assdd");
 		user.setUser_phno("888888888");
